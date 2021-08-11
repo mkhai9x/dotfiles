@@ -1,6 +1,3 @@
-"source $HOME/.local/share/nvim/plugged/vim-fugitive/plugin/fugitive.vim
-"source $HOME/.config/nvim/after/plugin/fugitive.rc.vim
-
 " Fundamentals "{{{
 " ---------------------------------------------------------------------
 
@@ -94,33 +91,32 @@ endif
 " File types "{{{
 " ---------------------------------------------------------------------
 " JavaScript
- au BufNewFile,BufRead *.es6 setf javascript
- " TypeScript
- au BufNewFile,BufRead *.tsx setf typescriptreact
- " Markdown
- au BufNewFile,BufRead *.md set filetype=markdown
- " Flow
- au BufNewFile,BufRead *.flow set filetype=javascript
- 
- set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
- 
- autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
- autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
- autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
+au BufNewFile,BufRead *.es6 setf javascript
+" TypeScript
+au BufNewFile,BufRead *.tsx setf typescriptreact
+" Markdown
+au BufNewFile,BufRead *.md set filetype=markdown
+" Flow
+au BufNewFile,BufRead *.flow set filetype=javascript
+
+set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
+
+autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
 "}}}
 
 " Imports "{{{
 " ---------------------------------------------------------------------
-runtime ./plug.vim
-
-if has("unix")
-  let s:uname = system("uname -s")
-  " Do Mac stuff
-  if s:uname == "Darwin\n"
-    runtime ./macos.vim
+  runtime ./plug.vim
+  if has("unix")
+    let s:uname = system("uname -s")
+    " Do Mac stuff
+    if s:uname == "Darwin\n"
+      runtime ./macos.vim
+    endif
   endif
-endif
 
 runtime ./maps.vim
 "}}}
@@ -130,52 +126,38 @@ runtime ./maps.vim
 
 " true color
 if exists("&termguicolors") && exists("&winblend")
+  syntax enable
+  set termguicolors
+  set winblend=0
+  set wildoptions=pum
+  set pumblend=5
+  set background=dark
+  " Use NeoSolarized
+  "let g:neosolarized_termtrans=1
+  "runtime ./colors/NeoSolarized.vim
   if exists('g:vscode')
-    " VSCode extension
+      " VSCode extension
   else
-    syntax enable
-    set termguicolors
-    set winblend=0
-    set wildoptions=pum
-    set pumblend=5
-    set background=dark
-    " Use NeoSolarized
-    let g:neosolarized_termtrans=1
-    " runtime ./colors/NeoSolarized.vim
+      " ordinary neovim
     let g:onedark_style = 'darker'
     colorscheme onedark
-    " colorscheme NeoSolarized
   endif
 endif
 
 "}}}
 
+
 " Extras "{{{
 " ---------------------------------------------------------------------
 set exrc
+"}}}
 let g:user_emmet_leader_key=','
 let g:user_emmet_settings = {
-  \  'javascript.jsx' : {
-    \      'extends' : 'jsx',
-    \  },
-  \} 
-"}}}
+\  'javascript' : {
+\      'extends' : 'jsx',
+\  },
+\}
 
-
-xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
-
-function! ExecuteMacroOverVisualRange()
-  echo "@".getcmdline()
-  execute ":'<,'>normal@".nr2char(getchar())
-endfunction
-
-"inoremap <silent><expr> <C-k> compe#complete()
-"inoremap <silent><expr> <CR>      compe#confirm('<CR>')
-"inoremap <silent><expr> <C-e>     compe#close('<C-e>')
-"inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
-"inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
-
-" vsnip settings
 imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
 smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
 
@@ -188,5 +170,13 @@ let g:vsnip_filetypes = {}
 let g:vsnip_filetypes.javascriptreact = ['javascript']
 let g:vsnip_filetypes.typescriptreact = ['typescript']
 
+
+
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+
+function! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction
+
 " vim: set foldmethod=marker foldlevel=0:
-" lua require('zephyr')
