@@ -1,0 +1,68 @@
+{
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.iconTheme": "vscode-icons",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.tokenColorCustomizations": {
+    "comments": "#229977"
+  },
+  // "editor.formatOnSave": true,
+  "editor.lineNumbers": "relative",
+  // "vim.easymotion": true,
+  // "vim.surround": true,
+  // "vim.sneak": true,
+  "editor.suggestSelection": "first",
+  // "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  // "vim.normalModeKeyBindingsNonRecursive": [
+  //   { "before": ["<C-j>"], "after": ["<C-w>", "j"] },
+  //   { "before": ["<C-k>"], "after": ["<C-w>", "k"] },
+  //   { "before": ["<C-h>"], "after": ["<C-w>", "h"] },
+  //   { "before": ["<C-l>"], "after": ["<C-w>", "l"] }
+  // ],
+  "editor.minimap.enabled": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "off"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "python.languageServer": "Pylance",
+  "prettier.singleQuote": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.tabSize": 2,
+  "ruby.useLanguageServer": true, // use the internal language server (see below)
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": true // enable rubocop via bundler
+    },
+    "reek": {
+      "useBundler": true // enable reek via bundler
+    }
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "C_Cpp.intelliSenseEngine": "Disabled",
+  "editor.wordWrapColumn": 200,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
+  "vscode-neovim.useWSL": true // use rubocop for formatting
+}
+
