@@ -1,0 +1,72 @@
+{
+  "python.pythonPath": "/usr/local/bin/python3",
+  "python.linting.enabled": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.tokenColorCustomizations": {
+    "comments": "#229977"
+  },
+  "code-runner.runInTerminal": true,
+
+  "code-runner.executorMap": {
+    "cpp": "cd $dir && g++ -std=c++14 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+  },
+  "terminal.integrated.fontFamily": "'MesloLGS NF'",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "java.semanticHighlighting.enabled": true,
+  "python.jediEnabled": false,
+  "python.languageServer": "Pylance",
+  "latex-workshop.view.pdf.viewer": "browser",
+  // "vim.easymotion": true,
+  // "vim.incsearch": true,
+  // "vim.useSystemClipboard": true,
+  // "vim.useCtrlKeys": true,
+  // "vim.leader": "<space>",
+  "editor.lineNumbers": "relative",
+  // "vim.normalModeKeyBindingsNonRecursive": [
+  //   { "before": ["<C-j>"], "after": ["<C-w>", "j"] },
+  //   { "before": ["<C-k>"], "after": ["<C-w>", "k"] },
+  //   { "before": ["<C-h>"], "after": ["<C-w>", "h"] },
+  //   { "before": ["<C-l>"], "after": ["<C-w>", "l"] }
+  // ],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "auto-rename-tag.activationOnLanguage": ["html", "xml", "php", "javascript"],
+  //"prettier.singleQuote": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.tabSize": 2,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "C_Cpp.updateChannel": "Insiders",
+  "editor.wordWrapColumn": 50,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "python.defaultInterpreterPath": "/usr/local/bin/python3",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "javascript.preferences.quoteStyle": "single",
+  "vscode-neovim.neovimInitVimPaths.darwin": "/Users/mkhai9x/.config/nvim/init.vim",
+  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+  "workbench.iconTheme": "helium-icon-theme",
+  "workbench.colorTheme": "One Dark Pro",
+  "vim.easymotion": true
+}
