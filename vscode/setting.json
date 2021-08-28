@@ -20,7 +20,7 @@
   // ],
   "editor.minimap.enabled": true,
   "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
+    "javascript": "javascriptreact"
   },
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -65,4 +65,3 @@
   "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
   "vscode-neovim.useWSL": true // use rubocop for formatting
 }
-

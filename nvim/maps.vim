@@ -37,7 +37,7 @@ vnoremap <silent> # :<C-U>
 nmap tn :tabnew 
 nmap te :tabedit 
 nmap th :tabprev<Return>
-nmap tl:tabnext<Return>
+nmap tl :tabnext<Return>
 
 "------------------------------
 " Windows
@@ -70,4 +70,6 @@ set lbr
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
+nnoremap <leader>f mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
+vnoremap <leader>f :!eslint_d --stdin --fix-to-stdout<CR>gv
 
